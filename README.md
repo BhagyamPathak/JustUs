@@ -35,7 +35,13 @@ Each chat room uses a unique key that acts as the encryption seed, ensuring that
 
 ## 📸 Preview
 
-> Add screenshots or GIFs here to showcase your UI
+## Screenshots
+
+### Desktop Preview
+![Screenshot 1](image/pc.png)
+
+### Mobile Previe
+![Screenshot 2](image/phone.png)
 
 ---
 
