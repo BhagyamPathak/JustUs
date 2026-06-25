@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JustUs</title>
+  <link rel="icon" type="image/png" href="images/chat.png">
+
+  <!-- Firebase (compat SDK only — one version) -->
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-storage-compat.js"></script>
+
+  <!-- CryptoJS -->
+  <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Loader -->
+  <div id="loader">
+    <h1>JustUs</h1>
+  </div>
+
+  <!-- Nav -->
+<nav id="bar">
+
+  <div class="logo">JustUs</div>
+
+  <div class="entries">
+    <input id="keyInput"
+           type="password"
+           placeholder="Room Number">
+
+    <!-- hidden cheat -->
+    <input id="cheat" style="display:none;">
+  </div>
+
+  <div class="count">
+    <div id="onlineCount"></div>
+    <div id="UniCount"></div>
+  </div>
+
+</nav>
+
+  <!-- Main chat area -->
+<main>
+  
+  <!-- Future pinned message -->
+  <div id="pinnedContainer"></div>
+
+  <!-- Future search -->
+  <div class="search-wrapper">
+      <input id="searchBox"
+             placeholder="Search messages (coming soon)">
+  </div>
+
+  <div id="chatBox"></div>
+
+  <!-- Future typing -->
+  <div id="typingIndicator"></div>
+
+  <div id="v"></div>
+
+</main>
+  <div id="replyPreview"></div>
+  <!-- Footer / input bar -->
+<footer>
+  <!-- Future reply preview -->
+
+<!-- <button class="icon-btn" onclick="document.getElementById('imageInput').click()">
+📷
+</button> -->
+
+<input
+  type="file"
+  id="imageInput"
+  accept="image/*"
+  style="display:none">
+
+  <textarea
+    id="messageInput"
+    placeholder="Type a message..."
+  ></textarea>
+
+  <button id="send">➜</button>
+
+</footer>
+
+
+<div id="imageViewer">
+
+  <span onclick="closeImage()">✕</span>
+
+  <img id="viewerImg">
+
+</div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
